@@ -4,7 +4,7 @@ from django_jalali.forms import jDateField, jDateInput
 from django_jalali.admin.widgets import AdminjDateWidget
 from django_jalali.admin.filters import JDateFieldListFilter
 
-from .models import Expense
+from .models import Expense, Income
 from django_jalali.db import models as jmodels
 
 
@@ -29,3 +29,4 @@ class ExpenseAdmin(admin.ModelAdmin):
 
 
 admin.site.register(Expense, ExpenseAdmin)
+admin.site.register(Income)

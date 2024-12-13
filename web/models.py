@@ -16,3 +16,8 @@ class Expense(models.Model):
         return f"{self.user.username}'s expense of {self.amount} on {self.date}"
 
 
+class Income(models.Model):
+    text = models.CharField(max_length=255)
+    date = jmodels.jDateField()
+    amount = models.BigIntegerField()
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
